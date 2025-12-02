@@ -8,6 +8,7 @@ export default function AboutPage() {
         <SectionHeading
           eyebrow="O fundacji"
           title="Pomorski Hub współpracy międzynarodowej"
+          as="h1"
           description="Fundacja Przyjaźń bez Granic buduje dwukierunkowe mosty – wzmacnia spójność społeczną w regionie i wspiera interwencje humanitarne za granicą."
         />
         <div className="grid gap-4 md:grid-cols-2">
@@ -84,7 +85,7 @@ export default function AboutPage() {
       <section className="rounded-3xl border border-primary/10 bg-white p-6 shadow-sm shadow-primary/5">
         <SectionHeading
           eyebrow="Organy i zespół"
-          title="Zarząd i rada fundacji"
+          title="Zarząd i Rada Fundacji"
           description="Struktura zarządcza FPbG, która zapewnia transparentność, odpowiedzialność i ciągłość decyzyjną."
         />
         <ul className="mt-4 grid gap-3 md:grid-cols-2">
@@ -97,9 +98,6 @@ export default function AboutPage() {
             </li>
           ))}
         </ul>
-        <div className="mt-6 rounded-2xl border border-primary/10 bg-primary/5 px-4 py-3 text-sm text-primary/80">
-          {governance.complianceNotes}
-        </div>
       </section>
     </div>
   );
