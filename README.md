@@ -34,9 +34,3 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
-## Mirror to Baltic Digital Institute
-
-Changes in this repository are automatically mirrored to `Baltic-Digital-Institute/strona-fpbg` by the workflow in `.github/workflows/mirror.yml`. It runs on every push to `main` (including tags) and uses `git push --mirror` to keep the destination repo as an exact copy.
-
-To activate the mirror, add a personal access token with `repo` scope and push rights to `Baltic-Digital-Institute/strona-fpbg` as an [Actions secret](https://docs.github.com/en/actions/security-guides/encrypted-secrets) named `BALTIC_PUSH_TOKEN`. The workflow reads this secret when it configures the remote and pushes the mirror.
