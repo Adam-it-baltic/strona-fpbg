@@ -31,3 +31,4 @@
 15. Dodano karte projektu wozki rehabilitacyjne 2024 z miniaturami i trasami
 
 16. Wdrozenie identyfikacji wizualnej (favicon + logo w nawigacji) - 2025-12-23
+17. Powiekszenie kontenera i logo w headerze - 2025-12-23
