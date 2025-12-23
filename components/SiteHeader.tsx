@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -26,7 +27,16 @@ export function SiteHeader() {
     <header className="sticky top-0 z-30 border-b border-primary/10 bg-sand/95 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 md:px-6">
         <div className="flex items-center gap-3">
-          <div className="h-10 w-10 rounded-full bg-accent/15 ring-2 ring-accent/40" />
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent/15 p-1 ring-2 ring-accent/40">
+            <Image
+              src="/assets/logo%20FPbG.svg"
+              alt="Logo Fundacji Przyjaźń bez Granic"
+              width={32}
+              height={32}
+              className="h-full w-full object-contain"
+              priority
+            />
+          </div>
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
               Fundacja Przyjaźń bez Granic
@@ -60,7 +70,7 @@ export function SiteHeader() {
           {open ? "×" : "≡"}
         </button>
       </div>
-      {/* Prosty panel mobilny — nie rozbudowujemy go, żeby zachować przejrzystość. */}
+      {/* Prosty panel mobilny - zachowany minimalistycznie dla czytelności. */}
       {open && (
         <div className="border-t border-primary/10 bg-white/90 px-4 pb-4 pt-2 shadow-lg md:hidden">
           <nav className="flex flex-col gap-2">

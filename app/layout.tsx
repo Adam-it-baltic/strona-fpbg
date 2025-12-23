@@ -21,7 +21,27 @@ const robotoSlab = Roboto_Slab({
 export const metadata: Metadata = {
   title: "Fundacja Przyjaźń bez Granic",
   description:
-    "Pomorski Hub współpracy międzynarodowej i działań humanitarnych.",
+    "Pomorski Hub współpracy międzynarodowej i działania humanitarnych.",
+  icons: {
+    icon: [
+      {
+        url: "/assets/logo%20FPbG.svg",
+        type: "image/svg+xml",
+      },
+    ],
+    shortcut: [
+      {
+        url: "/assets/logo%20FPbG.svg",
+        type: "image/svg+xml",
+      },
+    ],
+    apple: [
+      {
+        url: "/assets/logo%20FPbG.svg",
+        type: "image/svg+xml",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

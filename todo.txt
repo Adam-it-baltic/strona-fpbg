@@ -1,29 +1,3 @@
-### 16. Wdrożenie identyfikacji wizualnej (Favicon i Logo w Nawigacji)
+# todo
 
-* **Zakres:** Globalna konfiguracja strony (Metadata) oraz komponent Nawigacji (Header).
-* **Zmiany do wykonania:**
-* **Favicon:**
-* Zastąpienie domyślnej ikony `favicon.ico` plikiem `/public/assets/logo FPbG.svg`.
-* Konfiguracja metadanych (np. w `layout.tsx` lub `head`), aby przeglądarki wyświetlały nowe logo wektorowe jako ikonę strony.
-
-
-* **Logo w Menu Nawigacyjnym:**
-* **Lokalizacja:** Lewa sekcja paska nawigacyjnego, w miejscu przygotowanego graficznego "kółka" (placeholder), znajdującego się bezpośrednio na lewo od tekstów "FUNDACJA PRZYJAŹŃ BEZ GRANIC" oraz "Pomorski Hub współpracy międzynarodowej".
-* **Akcja:** Osadzenie pliku `logo FPbG.svg` wewnątrz istniejącego kontenera (kółka).
-* **Stylowanie:**
-* Dopasowanie rozmiaru logo tak, aby wpisywało się w obrys przygotowanego okręgu (zachowanie marginesu wewnętrznego/paddingu, jeśli konieczne, aby logo "oddychało").
-* Wyśrodkowanie logo wewnątrz okręgu (centrowanie w pionie i poziomie).
-* Upewnienie się, że dodanie logo nie przesuwa ani nie deformuje sąsiadującego bloku tekstowego z nazwą fundacji.
-
-
-
-
-
-
-* **Wynik:**
-* Strona posiada spójny branding FPbG widoczny na karcie przeglądarki.
-* W nagłówku, w dedykowanym okrągłym elemencie, widnieje poprawne logo fundacji, tworząc spójną całość z nazwą organizacji.
-
-
-* **Weryfikacja:**
-* **Visual check:** Favicon jest widoczny na karcie. Logo w nawigacji jest idealnie wpisane w okrągły kontener, jest czytelne, a układ tekstu obok pozostaje nienaruszony (zgodnie z layoutem).
+Brak otwartych zadań.
