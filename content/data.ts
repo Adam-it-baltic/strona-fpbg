@@ -163,22 +163,22 @@ export const projects: Project[] = [
       {
         label: "Express Kaszubski",
         url: "https://expresskaszubski.pl/pl/11_wiadomosci/49157_dzierzazno-dzieki-polsko-ukrainskiej-wspolpracy-do-szpitala-trafilo-30-wozkow.html",
-        thumbnail: "/screenshots/projekty/express-kaszubski.png",
+        thumbnail: "https://expresskaszubski.pl/news_foto//2023/1124/203405.jpg?20231124131446",
       },
       {
         label: "Nasze Miasto Zukowo",
         url: "https://zukowo.naszemiasto.pl/spolecznicy-z-ukrainy-przekazali-wozki-inwalidzkie/ar/c14-9534271",
-        thumbnail: "/screenshots/projekty/nasze-miasto-zukowo.png",
+        thumbnail: "https://d-art.ppstatic.pl/kadry/k/r/69/75/65630f04c74df_o_xlarge.jpg",
       },
       {
         label: "Radio Kaszebe",
         url: "https://radiokaszebe.pl/30-nowych-wozkow-rehabilitacyjnych-w-dzierzaznie/",
-        thumbnail: "/screenshots/projekty/radio-kaszebe.png",
+        thumbnail: "https://radiokaszebe.pl/wp-content/uploads/2023/11/IMG_3445-1024x748.jpg",
       },
       {
         label: "Dziennik Baltycki",
         url: "https://dziennikbaltycki.pl/spolecznicy-z-ukrainy-przekazali-wozki-inwalidzkie-szpitalowi-w-dzierzaznie/gh/c14-18106465",
-        thumbnail: "/screenshots/projekty/dziennik-baltycki.png",
+        thumbnail: "https://d-art.ppstatic.pl/kadry/k/r/1/16/94/65630f011f62c_o_xlarge.jpg",
       },
     ],
   },
