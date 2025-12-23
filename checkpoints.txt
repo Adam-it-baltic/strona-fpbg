@@ -14,3 +14,4 @@ f81f4dd44a9e42f96e12e6643d57c45b4541214c
 2e3a1d04242021eda308ed6064567eac96a0568d
 2025-12-23 checkpoint: stan bazowy przed task 16 (favicon + logo), bez nowych testów
 6679064 task 16: favicon + logo w headerze; curl / i /o-fundacji; Playwright headed; Lighthouse (dev+prod); axe 0 violations
+0da1bf9 task 17: powiekszenie kontenera/logo w headerze; curl / i /o-fundacji; Playwright headed; Lighthouse dev (perf 0.42, a11y 1.0, bp 1.0, SEO 1.0); axe 0 violations
