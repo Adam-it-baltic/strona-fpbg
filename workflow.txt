@@ -1,21 +1,197 @@
-Najpierw przeanalizuj caly projekt
-Przeanalizuj todo oraz todo_done abys wiedzial co jest do zrobienia a co zostało juz zrobione
-Przeanalizuj Specyfikacja Wdrożeniowa Strony WWW Fundacja Przyjaźń bez Granic.md oraz Tworzenie Instrukcji FPbG.md abys wiedział jak masz wykonać projekt.
-Ponownie przeanalizuj projekt - teraz wiesz juz co zostalo wykonane w projekcie a co nie
-Sprawdz repozytorium zdalne z katalogu głównego (czyli lokalizacja tego pliku w drzewie katalogu projektu)
-Każdą zmianę weryfikuj przez curl, inne testy - naprawiaj do skutku
-Testowanie route'ów i funkcjonalności wykonuj używając Playwright w trybie headed (z włączoną przeglądarką)
-- użyj komendy npm run test:e2e:headed w katalogu strona-dla-fpbg - chcę widzieć w przeglądarce co się dzieje podczas testów.
-Po zakończeniu każdego zadania testuj cala strone za pomocą Lighthouse oraz axe DevTools, strona musi spelniac kryteria opisane w lighthouse-axe-checklist.txt
-Przed rozpoczęciem pracy zapisz bieżący stan w repozytorium abyś mógł cofnąć się do działającej wersji
-Każde zadanie z todo wymaga najpierw stworzenia nowego branchu - realizacji zadania - weryfikacji dokładniej
-- i ewentualna naprawa - przeniesienie zmian do mastera - weryfikacja i ewentualna naprawa - dopiero kolejne zadanie z todo.txt
-Nie możesz przejsc dalej do zadnego zadania bez szczegółowego upewnienia się, że wszystko działa.
-Wszystkie błędy frontu i backendu mają być trzymane w strona-dla-fpbg/logs
-Po naprawie błędów mają być skasowane z logs.
-Po każdej zmianie i teście sprawdzasz również czy błąd się nie pojawił i reagujesz na niego.
-Kod ma być skalowalny i profesjonalny i ma zawierac polskie komentarze.
-Każde wykonane zadanie przenosisz do todo_done.txt w katalogu głównym - od razu po wykonaniu tego zadania.
-Zawsze tworzysz kod wraz z wersją RWD czyli na każde urządzenie.
-Kolejne widoki/ podstrony mają być spójne ze sobą.
-Po wykonanym zadaniu zapisz checkpoint do commita w pliku checkpoints.txt abyś mógł się cofnąć gdyby wprowadzone zmiany mi nie odpowiadaly
+Twoim zadaniem jest w pełni automatyczne wykonanie całego pipeline tworzenia projektu zgodnie z workflow.txt i todo.txt.
+Masz dostęp do systemu plików, repozytorium git, możesz wykonywać komendy, patchować pliki, uruchamiać Playwright w trybie headed, generować screenshoty, uruchamiać Lighthouse i axe oraz zapisywać wyniki do katalogów projektu.
+
+========================================
+KONTEKST I CEL (UNIWERSALNY DLA NEXT.JS)
+========================================
+
+* Projekt = aplikacja web w Next.js (App Router lub Pages Router – wykryj automatycznie po strukturze).
+* Celem jest dowiezienie kompletnego produktu zgodnie ze specyfikacją domenową z plików .md (jeśli istnieją), z pełnymi testami E2E, audytami jakości i dokumentacją.
+* Pracujesz jak “autonomiczny senior dev + QA + release manager”.
+
+========================================
+ZASADY OGÓLNE (NIEZMIENNE)
+==========================
+
+1. Za każdym razem najpierw analizuj:
+
+* workflow.txt
+* todo.txt
+* todo_done.txt
+* checkpoints.txt (jeśli istnieje)
+* lighthouse-axe-checklist.txt (jeśli istnieje)
+* Dokumenty w Markdown (w /docs)
+* bieżący stan repozytorium (git status, ostatnie commity, struktura katalogów)
+
+2. Ustal “prawdę projektu” na podstawie kodu i repozytorium:
+
+* nie zakładaj nic na słowo,
+* zawsze weryfikuj wykonanie zadania w kodzie + testach.
+
+3. Pracujesz wyłącznie w małych krokach, każdy krok to:
+
+* nowy branch → wykonanie zadania → testy → naprawy → merge do głównego brancha → usunięcie brancha → aktualizacja todo.txt i todo_done.txt → aktualizacja checkpoints.txt
+
+4. Zasada STOP:
+
+* nie przechodzisz do kolejnego zadania, jeśli aktualne nie spełnia kryteriów “DEFINITION OF DONE” (poniżej).
+
+5. Kod i jakość:
+
+* cały kod ma być skalowalny, profesjonalny, czytelny
+* pełne RWD (mobile-first, brak “rozjechań”)
+* polskie komentarze (tylko tam, gdzie realnie pomagają; nie spamuj)
+* spójność UI/UX pomiędzy podstronami (layout, typografia, spacing, komponenty)
+
+========================================
+STRUKTURA REPO I KATALOGI ARTEFAKTÓW
+====================================
+
+W projekcie utrzymuj stałe katalogi (utwórz jeśli nie istnieją):
+
+* /logs                -> tylko aktywne błędy do naprawy; po naprawie usuń wpis
+* /screenshots         -> screenshoty z Playwright + manualne
+* /reports/lighthouse  -> raporty Lighthouse (HTML/JSON)
+* /reports/axe         -> wyniki axe (JSON/HTML lub zrzuty)
+* /reports/playwright  -> raporty testów (jeśli generowane)
+* /docs                -> dodatkowa dokumentacja uruchomieniowa/architektura (jeśli potrzebne)
+
+Każdy artefakt zapisuj z konwencją nazw:
+
+* YYYY-MM-DD__<obszar>**<co>**<wersja/branch>.*
+  Przykład: 2025-12-02__home__lighthouse__main.html
+
+========================================
+DEFINITION OF DONE (DLA KAŻDEGO ZADANIA)
+========================================
+
+Zadanie uznajesz za ukończone dopiero gdy:
+
+1. repo jest czyste (git status bez zmian) po commicie
+2. sanity-check działa:
+
+* curl do kluczowych route’ów (min. /, oraz route’y dotknięte zadaniem)
+* brak 5xx, brak niespodziewanych 4xx
+
+3. Playwright headed przechodzi:
+
+* npm run test:e2e:headed (w wymaganym katalogu projektu)
+* jeśli brak testów: najpierw dopisz minimalne testy krytycznych ścieżek
+
+4. Lighthouse:
+
+* uruchom i zapisz raport do /reports/lighthouse
+* projekt spełnia kryteria z lighthouse-axe-checklist.txt (jeśli jest)
+
+5. axe DevTools:
+
+* uruchom, zapisz wynik do /reports/axe
+* brak istotnych naruszeń (a jeśli są: napraw albo udokumentuj wyjątek w /docs z uzasadnieniem)
+
+6. brak wpisów w /logs dotyczących tego zadania (jeśli były → naprawione i usunięte)
+
+========================================
+PROCES PRACY (PIPELINE END-TO-END)
+==================================
+
+0. CHECKPOINT START:
+
+* przed rozpoczęciem pracy zrób commit “checkpoint” (jeśli są lokalne zmiany) lub tag/commit opisowy w historii
+* dopisz wpis do checkpoints.txt: co działa, jak uruchomić, jakie testy przeszły
+
+1. DIAGNOZA:
+
+* odczytaj todo.txt i todo_done.txt, określ kolejność
+* odczytaj specyfikacje .md i porównaj z istniejącym stanem
+* wykryj typ Next.js (App Router/Pages), wersje node/npm, menedżer paczek
+* sprawdź zdalne repo (origin), brancha głównego (main/master) i stan divergence
+
+2. WYKONANIE ZADANIA (JEDEN BRANCH = JEDNO ZADANIE):
+
+* utwórz branch o nazwie: task/<nr>-<krotki-opis>
+* implementuj minimalnie, ale kompletnie
+* nie rób refactoru “przy okazji” jeśli nie jest wymagany przez zadanie (chyba że blokuje testy)
+
+3. TESTY I NAPRAWY:
+
+* uruchom sanity-check curl dla zmienianych route’ów
+* uruchom Playwright headed i napraw do skutku
+* uruchom Lighthouse i axe, zapisz raporty, napraw do skutku
+* wszelkie błędy zapisuj w /logs jako osobne pliki: <obszar>__<blad>__YYYY-MM-DD.md
+* po naprawie usuń wpis z /logs
+
+4. MERGE I PORZĄDEK:
+
+* zrób merge do brancha głównego
+* usuń branch zadania
+* zaktualizuj todo.txt (usuń wykonane) i dopisz do todo_done.txt (z krótkim opisem + datą)
+* dopisz do checkpoints.txt: commit hash, co zostało ukończone, jakie testy/audyty przeszły
+
+5. POWTÓRZ dla kolejnego zadania aż todo.txt będzie puste.
+
+========================================
+STANDARDY TECHNICZNE NEXT.JS (UNIWERSALNE)
+==========================================
+
+1. Stabilność uruchomienia:
+
+* aplikacja domyślnie działa na porcie 3000 (jeśli specyfikacja nie mówi inaczej)
+* zapewnij spójne komendy w package.json: dev, build, start, lint, test:e2e, test:e2e:headed
+
+2. Architektura i jakość:
+
+* komponenty współdzielone: /components
+* layouty/sekcje: /components/sections
+* style: preferuj podejście spójne (np. Tailwind lub CSS Modules) – dopasuj do projektu, nie mieszaj bez potrzeby
+* walidacja danych/typy: TypeScript jeśli już obecny; jeśli nie, nie migruj bez wymogu (chyba że spec jednoznacznie wymaga)
+
+3. Dostępność i UX:
+
+* semantyczny HTML (header/nav/main/footer)
+* focus states, aria-label gdzie trzeba
+* kontrast, responsywne typografie, logiczne nagłówki (H1-H3)
+
+4. SEO i wydajność:
+
+* metadata (title/description), OpenGraph jeśli potrzebne
+* obrazy przez next/image
+* unikaj zbędnego JS na landingach
+
+========================================
+ZASADY DOT. SPECYFIKACJI (JEŚLI ISTNIEJE)
+=========================================
+
+* Jeśli istnieją pliki “Specyfikacja… .md” / “Instrukcja… .md”:
+
+  * traktuj je jako nadrzędne źródło prawdy,
+  * dopasuj treści, podstrony, nawigację, CTA, dane kontaktowe itd.
+* Jeśli brakuje informacji lub są sprzeczności:
+
+  * wybierz rozwiązanie najmniej ryzykowne i spójne ze stroną,
+  * odnotuj decyzję w /docs/decisions.md (krótko: problem → decyzja → powód).
+
+========================================
+KOŃCOWE ZAMKNIĘCIE PROJEKTU
+===========================
+
+Gdy todo.txt jest puste:
+
+* uruchom pełny smoke test całej strony:
+
+  * curl kluczowych tras
+  * Playwright headed (pełny run)
+  * Lighthouse + axe (dla kluczowych podstron)
+* upewnij się, że /logs jest puste
+* zrób końcowy commit “release: complete pipeline”
+* zrób końcowy push do zdalnego repo
+
+========================================
+WAŻNE OGRANICZENIA I ZACHOWANIA
+===============================
+
+* Nie pomijaj testów “bo drobna zmiana”.
+* Nie zostawiaj TODO w kodzie bez powodu (jeśli zostawiasz, opisz w /docs).
+* Nie zmieniaj masowo stylu/formatowania bez potrzeby (spójność historii git).
+* Zawsze zapisuj raporty i screenshoty do właściwych katalogów.
+
+Wykonuj wszystkie kroki automatycznie, od A do Z.
