@@ -1,5 +1,26 @@
-# todo
+### 18. Aktualizacja i stylowanie miniatur w sekcji "Dowody i odnośniki"
 
-# todo
+* **Zakres:** Podstrona `/projekty/wozki-rehabilitacyjne-2024`, sekcja "Dowody i odnośniki".
+* **Problem:** Obecne miniatury artykułów są niepoprawne – część z nich wyświetla błąd ładowania (czerwony "X"), a pozostałe są niewłaściwie wykadrowane.
+* **Zmiany do wykonania:**
+* **Aktualizacja źródeł zdjęć (`src`):**
+Proszę podmienić adresy URL grafik dla poszczególnych kafelków zgodnie z poniższą listą:
+* **Express Kaszubski:** `https://expresskaszubski.pl/news_foto//2023/1124/203405.jpg?20231124131446`
+* **Radio Kaszebe:** `https://radiokaszebe.pl/wp-content/uploads/2023/11/IMG_3445-1024x748.jpg`
+* **Nasze Miasto Zukowo:** `https://d-art.ppstatic.pl/kadry/k/r/69/75/65630f04c74df_o_xlarge.jpg`
+* **Dziennik Baltycki:** `https://d-art.ppstatic.pl/kadry/k/r/1/16/94/65630f011f62c_o_xlarge.jpg`
 
-Brak otwartych zadań.
+
+* **Korekta stylowania (CSS):**
+* Należy upewnić się, że kontener obrazka ma ustaloną stałą wysokość (np. `h-48` lub `200px`), aby wszystkie kafelki były równe.
+* Zastosowanie właściwości `object-fit: cover;`, aby zdjęcia wypełniały całą przestrzeń miniatury bez zniekształceń (rozciągania) i bez pozostawiania pustych przestrzeni (szare tło widoczne na zrzucie).
+* Zachowanie zaokrąglonych rogów (border-radius) tylko na górnej krawędzi zdjęcia, aby pasowało do obrysu karty.
+
+
+* **Wynik:**
+* Wszystkie cztery kafelki w sekcji wyświetlają poprawne zdjęcia z prasy.
+* Zdjęcia są estetycznie wykadrowane, a układ kafelków (grid) jest równy i spójny wizualnie.
+
+
+* **Weryfikacja:**
+* **Visual check:** Brak ikon błędu (czerwonych "X"). Zdjęcia są ostre, czytelne i nie są sztucznie spłaszczone ani rozciągnięte.

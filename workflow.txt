@@ -183,7 +183,6 @@ Gdy todo.txt jest puste:
   * Lighthouse + axe (dla kluczowych podstron)
 * upewnij się, że /logs jest puste
 * zrób końcowy commit “release: complete pipeline”
-* zrób końcowy push do zdalnego repo
 
 ========================================
 WAŻNE OGRANICZENIA I ZACHOWANIA

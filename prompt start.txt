@@ -46,7 +46,6 @@ Po zakończeniu:
 - upewnij się, że brak błędów
 - zaktualizuj todos
 - zrób końcowy commit
-- zrób końcowy push
 
 Wykonuj wszystkie kroki automatycznie, od A do Z."
 
