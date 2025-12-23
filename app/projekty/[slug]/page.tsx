@@ -98,11 +98,11 @@ export default async function ProjectPage({ params }: Props) {
             <a
               key={link.url}
               href={link.url}
-              className="group overflow-hidden rounded-2xl border border-primary/10 bg-white shadow-sm shadow-primary/5 transition hover:-translate-y-1 hover:shadow-primary/20"
+              className="group rounded-2xl border border-primary/10 bg-white shadow-sm shadow-primary/5 transition hover:-translate-y-1 hover:shadow-primary/20"
               rel="noreferrer"
               target="_blank"
             >
-              <div className="h-40 w-full overflow-hidden bg-sand">
+              <div className="h-48 w-full overflow-hidden rounded-t-2xl bg-sand">
                 <img
                   src={link.thumbnail || "/exampleLinks.png"}
                   alt={`Miniatura artykulu ${link.label}`}
