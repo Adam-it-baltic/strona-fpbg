@@ -13,7 +13,7 @@ export default function AccessibilityPage() {
         <li>• Elementy interaktywne posiadają wyróżniony fokus dla nawigacji klawiaturą.</li>
       </ul>
       <p className="text-sm text-primary/80">
-        W przypadku problemów z dostępnością skontaktuj się: kontakt@fpbg.org. Na zgłoszenia odpowiadamy w terminie 14 dni roboczych.
+        W przypadku problemów z dostępnością skontaktuj się: kontakt@fundacja-przyjazn.pl. Na zgłoszenia odpowiadamy w terminie 14 dni roboczych.
       </p>
     </div>
   );

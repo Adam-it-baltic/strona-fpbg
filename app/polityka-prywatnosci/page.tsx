@@ -13,7 +13,7 @@ export default function PrivacyPage() {
         <li>• Kontakt z fundacją możliwy mailowo lub telefonicznie; dane udostępniane dobrowolnie używane są wyłącznie do udzielenia odpowiedzi.</li>
       </ul>
       <p className="text-sm text-primary/80">
-        W sprawach dotyczących prywatności prosimy o kontakt pod adresem: {`kontakt@fpbg.org`}.
+        W sprawach dotyczących prywatności prosimy o kontakt pod adresem: {`kontakt@fundacja-przyjazn.pl`}.
       </p>
     </div>
   );

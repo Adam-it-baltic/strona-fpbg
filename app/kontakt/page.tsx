@@ -6,9 +6,9 @@ export default function ContactPage() {
     <div className="mx-auto max-w-6xl space-y-10 px-4 py-12 md:px-6 md:py-16">
       <SectionHeading
         eyebrow="Kontakt i partnerzy"
-        title="Zostan czescia mostow FPbG"
+        title="Zostań częścią mostów FPbG"
         as="h1"
-        description="Jestesmy integralna czescia ekosystemu, ktory zapewnia technologiczne i organizacyjne wsparcie. Skontaktuj sie, aby dolaczyc do naszych inicjatyw."
+        description="Jesteśmy integralną częścią ekosystemu, który zapewnia technologiczne i organizacyjne wsparcie. Skontaktuj się, aby dołączyć do naszych inicjatyw."
       />
 
       <section className="grid gap-6 md:grid-cols-2">
@@ -28,7 +28,7 @@ export default function ContactPage() {
         <div className="rounded-3xl border border-primary/10 bg-sand p-6 shadow-sm shadow-primary/5">
           <h2 className="text-lg font-semibold text-primary">Partnerzy systemowi</h2>
           <p className="mt-2 text-sm text-primary/80">
-            Wspolpraca buduje sie na relacjach i zaufaniu. Ponizej lista partnerow, ktorzy wzmacniaja nasze dzialania.
+            Współpraca buduje się na relacjach i zaufaniu. Poniżej lista partnerów, którzy wzmacniają nasze działania.
           </p>
           <ul className="mt-3 space-y-2 text-sm font-semibold text-primary">
             {partners.map((partner) => (

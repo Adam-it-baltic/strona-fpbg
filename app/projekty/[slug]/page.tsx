@@ -60,7 +60,7 @@ export default async function ProjectPage({ params }: Props) {
           <p className="mt-2 text-sm text-primary/80">{project.context}</p>
         </article>
         <article className="rounded-3xl border border-primary/10 bg-white p-6 shadow-sm shadow-primary/5">
-          <h2 className="text-lg font-semibold text-primary">Dzialania</h2>
+          <h2 className="text-lg font-semibold text-primary">Działania</h2>
           <p className="mt-2 text-sm text-primary/80">{project.action}</p>
         </article>
       </section>
@@ -79,7 +79,7 @@ export default async function ProjectPage({ params }: Props) {
           </ul>
         </div>
         <div className="rounded-3xl border border-primary/10 bg-sand p-6 shadow-sm shadow-primary/5">
-          <h2 className="text-lg font-semibold text-primary">Zrodla finansowania</h2>
+          <h2 className="text-lg font-semibold text-primary">Źródła finansowania</h2>
           <ul className="mt-2 space-y-1 text-sm text-primary/80">
             {project.fundingSources.map((source) => (
               <li key={source}>- {source}</li>
@@ -89,9 +89,9 @@ export default async function ProjectPage({ params }: Props) {
       </section>
 
       <section className="rounded-3xl border border-primary/10 bg-white p-6 shadow-sm shadow-primary/5">
-        <h2 className="text-lg font-semibold text-primary">Dowody i odnosniki</h2>
+        <h2 className="text-lg font-semibold text-primary">Dowody i odnośniki</h2>
         <p className="mt-2 text-sm text-primary/80">
-          Linki zewnetrzne stanowia cyfrowe dowody rzeczowe zgodnie ze Standardem Karty Projektu FPbG.
+          Linki zewnętrzne stanowią cyfrowe dowody rzeczowe zgodnie ze Standardem Karty Projektu FPbG.
         </p>
         <div className="mt-4 grid gap-4 md:grid-cols-2">
           {project.auditLinks.map((link) => (
@@ -105,7 +105,7 @@ export default async function ProjectPage({ params }: Props) {
               <div className="h-48 w-full overflow-hidden rounded-t-2xl bg-sand">
                 <img
                   src={link.thumbnail || "/exampleLinks.png"}
-                  alt={`Miniatura artykulu ${link.label}`}
+                  alt={`Miniatura artykułu ${link.label}`}
                   className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
                 />
               </div>
